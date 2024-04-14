@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Lottie.asset(
           "assets/animations/netflix.json",
-          height: 150,
+          width: 200,
         ),
       ),
     );

@@ -14,7 +14,7 @@ class MainPage extends StatelessWidget {
     const NewAndHotScreen(),
     const FastLaughsScreen(),
     const SearchScreen(),
-    const DownloadScreen(),
+     DownloadScreen(),
   ];
 
   @override

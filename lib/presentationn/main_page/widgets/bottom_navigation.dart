@@ -11,6 +11,7 @@ class BottomNavigationWidget extends StatelessWidget {
       valueListenable: indexNotifier,
       builder: (context, value, child) {
         return BottomNavigationBar(
+          landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
           currentIndex: value,
           onTap: (index) {
             indexNotifier.value = index;
@@ -20,14 +21,26 @@ class BottomNavigationWidget extends StatelessWidget {
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.white,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.collections), label: 'New & Hot'),
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.emoji_emotions), label: 'Fast Laughs'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+              icon: Icon(Icons.collections),
+              label: 'New & Hot',
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.download), label: 'Download'),
+              icon: Icon(Icons.emoji_emotions),
+              label: 'Fast Laughs',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.download),
+              label: 'Download',
+            ),
           ],
         );
       },

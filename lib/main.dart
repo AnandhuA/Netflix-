@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/core/colors/colors.dart';
+import 'package:netflix/core/colors.dart';
 import 'package:netflix/presentationn/splash/splash.dart';
 
 void main() {
@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: backgroundBlack,
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white),
-          bodySmall: TextStyle(color: Colors.white),
-          bodyMedium: TextStyle(color: Colors.white),
+          bodyLarge: TextStyle(color: textWhite),
+          bodySmall: TextStyle(color: textWhite),
+          bodyMedium: TextStyle(color: textWhite),
         ),
       ),
       home: const SplashScreen(),
