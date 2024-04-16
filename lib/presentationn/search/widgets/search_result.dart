@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/search/widgets/search_result_iteams.dart';
+import 'package:netflix/presentationn/widgets/title_text_widget.dart';
 
 class SearchResultWidget extends StatelessWidget {
   const SearchResultWidget({super.key});
@@ -10,7 +11,7 @@ class SearchResultWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Movies & T V shows"),
+        const TitleTextWidget(title: "Movies & T V shows"),
         kHeight,
         Expanded(
           child: GridView.count(

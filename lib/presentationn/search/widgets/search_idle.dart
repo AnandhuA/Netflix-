@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/search/widgets/top_search_iteam_tile.dart';
+import 'package:netflix/presentationn/widgets/title_text_widget.dart';
 
 class SearchIdleWidget extends StatelessWidget {
   const SearchIdleWidget({super.key});
@@ -11,13 +12,7 @@ class SearchIdleWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          "Top Searches",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+        const TitleTextWidget(title: "Top Searches"),
         kHeight,
         Expanded(
           child: ListView.separated(
@@ -26,10 +21,12 @@ class SearchIdleWidget extends StatelessWidget {
               return const TopSearchIteamTile();
             },
             separatorBuilder: (context, index) => kHeight20,
-            itemCount: 8,
+            itemCount: 20,
           ),
         ),
       ],
     );
   }
 }
+
+

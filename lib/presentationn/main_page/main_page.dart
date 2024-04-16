@@ -3,7 +3,7 @@ import 'package:netflix/presentationn/download/download.dart';
 import 'package:netflix/presentationn/fast_laughs/fast_laughs.dart';
 import 'package:netflix/presentationn/home/home_screen.dart';
 import 'package:netflix/presentationn/main_page/widgets/bottom_navigation.dart';
-import 'package:netflix/presentationn/new_&_hot/new_&_hot.dart';
+import 'package:netflix/presentationn/new_&_hot/new_and_hot.dart';
 import 'package:netflix/presentationn/search/search.dart';
 
 class MainPage extends StatelessWidget {
@@ -13,7 +13,7 @@ class MainPage extends StatelessWidget {
     const HomeScreen(),
     const NewAndHotScreen(),
     const FastLaughsScreen(),
-     SearchScreen(),
+    const SearchScreen(),
     const DownloadScreen(),
   ];
 

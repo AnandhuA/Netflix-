@@ -13,6 +13,7 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   bool onChange = false;
+  final TextEditingController searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,16 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Column(
             children: [
               CupertinoSearchTextField(
+                controller: searchController,
                 onChanged: (value) {
                   setState(() {
                     onChange = true;
+                  });
+                },
+                onSuffixTap: () {
+                  searchController.clear();
+                  setState(() {
+                    onChange = false;
                   });
                 },
                 backgroundColor: Colors.grey.withOpacity(0.4),
@@ -43,7 +51,9 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               kHeight,
               Expanded(
-                child: onChange ? const SearchResultWidget() : const SearchIdleWidget(),
+                child: onChange
+                    ? const SearchResultWidget()
+                    : const SearchIdleWidget(),
               )
             ],
           ),

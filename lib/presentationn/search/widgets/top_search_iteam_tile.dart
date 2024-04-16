@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors.dart';
+import 'package:netflix/core/sizes.dart';
 
 const imageUrl =
     "https://media.themoviedb.org/t/p/w533_and_h300_bestv2/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg";
@@ -12,13 +13,18 @@ class TopSearchIteamTile extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Row(
       children: [
-        Image.network(
-          imageUrl,
-          width: size.width * 0.4,
-          height: 70,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(5),
+          child: Image.network(
+            imageUrl,
+            width: size.width * 0.35,
+            height: 80,
+            fit: BoxFit.cover,
+          ),
         ),
+        kWidth,
         const Expanded(
-          child:  Text(
+          child: Text(
             "Movie Name",
             style: TextStyle(
               fontSize: 16,
