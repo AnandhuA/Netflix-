@@ -4,7 +4,8 @@ import 'package:netflix/core/colors.dart';
 import 'package:netflix/core/sizes.dart';
 
 class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({super.key});
+  final String title;
+  const AppBarWidget({super.key,required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class AppBarWidget extends StatelessWidget {
         children: [
           kWidth,
           Text(
-            "Downloads",
+            title,
             style: GoogleFonts.montserrat(
               textStyle: const TextStyle(
                 fontSize: 30,

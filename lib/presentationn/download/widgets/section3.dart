@@ -16,7 +16,9 @@ class DownloadsScreenSection3 extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             padding: const EdgeInsets.symmetric(vertical: 15),
             color: buttonColorBlue,
-            onPressed: () {},
+            onPressed: () {
+             
+            },
             child: const Text(
               "Set Up",
               style: TextStyle(color: textWhite, fontSize: 20),

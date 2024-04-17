@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/home/widgets/background_card.dart';
 import 'package:netflix/presentationn/home/widgets/custom_app_bar.dart';
@@ -31,27 +32,31 @@ class HomeScreen extends StatelessWidget {
             child: Stack(
               children: [
                 ListView(
-                  children: const [
-                    BackgroundCardWidget(),
+                  children: [
+                    const BackgroundCardWidget(),
                     kHeight,
                     MainTitleCardWidget(
                       titleText: "Released in the past year",
+                      imageList: releasedInPastYearUrls,
                     ),
                     MainTitleCardWidget(
                       titleText: "Trending Now",
+                      imageList: trendingUrls,
                     ),
-                    TitleNumberCard(
+                    const TitleNumberCard(
                       titleText: "Top 10 Tv Shows in India Today",
                     ),
                     MainTitleCardWidget(
                       titleText: "Tenes Dramas",
+                      imageList: tenesDramasUrls,
                     ),
                     MainTitleCardWidget(
                       titleText: "South Indian Cinema",
+                      imageList: southCinemaUrls
                     ),
                   ],
                 ),
-                scrollNotifier.value ? CustomAppBarWidget() : kHeight
+                scrollNotifier.value ? const CustomAppBarWidget() : kHeight
               ],
             ),
           );

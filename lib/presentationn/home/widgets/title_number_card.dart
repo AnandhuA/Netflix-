@@ -1,7 +1,8 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
+import 'package:netflix/api/urls.dart';
 import 'package:netflix/core/colors.dart';
-import 'package:netflix/presentationn/search/widgets/search_result_iteams.dart';
 import 'package:netflix/presentationn/widgets/title_text_widget.dart';
 
 class TitleNumberCard extends StatelessWidget {
@@ -21,7 +22,7 @@ class TitleNumberCard extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: List.generate(
-              6,
+              downloadsImageUrls.length~/2,
               (index) {
                 return Stack(
                   children: [
@@ -35,8 +36,10 @@ class TitleNumberCard extends StatelessWidget {
                           margin: const EdgeInsets.symmetric(vertical: 10),
                           width: 150,
                           decoration: BoxDecoration(
-                            image: const DecorationImage(
-                              image: NetworkImage(url),
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                "$imageUrl${downloadsImageUrls[index]}",
+                              ),
                               fit: BoxFit.cover,
                             ),
                             borderRadius: BorderRadius.circular(10),
