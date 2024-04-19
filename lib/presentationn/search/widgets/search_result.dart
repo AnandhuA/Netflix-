@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/search/widgets/search_result_iteams.dart';
 import 'package:netflix/presentationn/widgets/title_text_widget.dart';
@@ -20,8 +21,8 @@ class SearchResultWidget extends StatelessWidget {
             crossAxisSpacing: 8,
             childAspectRatio: 1 / 1.5,
             children: List.generate(
-              20,
-              (index) => const SearchResultIteam(),
+              searchItames.length,
+              (index) =>  SearchResultIteam(index: index,),
             ),
           ),
         )

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-
-const url =
-    "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg";
+import 'package:netflix/api/functions/functions.dart';
+import 'package:netflix/api/urls.dart';
 
 class SearchResultIteam extends StatelessWidget {
-  const SearchResultIteam({super.key});
+  final int index;
+  const SearchResultIteam({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        image: const DecorationImage(
-          image: NetworkImage(url),
+        image: DecorationImage(
+          image: NetworkImage("$imageUrl${searchItames[index]}"),
           fit: BoxFit.cover,
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/search/widgets/search_idle.dart';
 import 'package:netflix/presentationn/search/widgets/search_result.dart';
@@ -25,7 +26,8 @@ class _SearchScreenState extends State<SearchScreen> {
             children: [
               CupertinoSearchTextField(
                 controller: searchController,
-                onChanged: (value) {
+                onSubmitted: (value) async {
+                  await getSearchIteam(query: searchController.text);
                   setState(() {
                     onChange = true;
                   });

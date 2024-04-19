@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/colors.dart';
 import 'package:netflix/core/sizes.dart';
 
-const imageUrl =
-    "https://media.themoviedb.org/t/p/w533_and_h300_bestv2/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg";
-
 class TopSearchIteamTile extends StatelessWidget {
-  const TopSearchIteamTile({super.key});
+  final int index;
+  const TopSearchIteamTile({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +15,17 @@ class TopSearchIteamTile extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image.network(
-            imageUrl,
+            terndingModels[index].banner,
             width: size.width * 0.35,
             height: 80,
             fit: BoxFit.cover,
           ),
         ),
         kWidth,
-        const Expanded(
+        Expanded(
           child: Text(
-            "Movie Name",
+            terndingModels[index].title,
+            // ignore: prefer_const_constructors
             style: TextStyle(
               fontSize: 16,
             ),

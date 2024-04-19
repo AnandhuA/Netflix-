@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     MainTitleCardWidget(
                       titleText: "Trending Now",
-                      imageList: trendingUrls,
+                      imageList:trendingUrls ,
                     ),
                     TitleNumberCard(
                       titleText:
