@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/api/urls.dart';
 import 'package:netflix/presentationn/fast_laughs/widget/video_list_iteam.dart';
 
 class FastLaughsScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class FastLaughsScreen extends StatelessWidget {
         child: PageView(
           scrollDirection: Axis.vertical,
           children: List.generate(
-            20,
+            videoList.length,
             (index) => VideoListIteam(
               index: index,
             ),

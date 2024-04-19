@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/sizes.dart';
+import 'package:netflix/presentationn/new_&_hot/widgets/video_player.dart';
 import 'package:netflix/presentationn/widgets/custom_button.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 
 class CommingSoonWidget extends StatelessWidget {
   const CommingSoonWidget({super.key});
@@ -11,8 +12,9 @@ class CommingSoonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return ListView(
-      children: List.generate(comingSoon.length, (index) {
+    return ListView.builder(
+      itemCount: comingSoon.length,
+      itemBuilder: (context, index) {
         DateTime date = DateTime.parse(comingSoon[index].releaseDate);
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
@@ -47,28 +49,8 @@ class CommingSoonWidget extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      color: Colors.grey,
-                      width: double.infinity,
-                      height: 200,
-                      child: comingSoon[index].videoKey == null
-                          ? const Center(child: Text("video is not available"))
-                          : YoutubePlayer(
-                              controller: YoutubePlayerController(
-                                initialVideoId: comingSoon[index].videoKey!,
-                                flags: const YoutubePlayerFlags(
-                                  autoPlay: false,
-                                  mute: false,
-                                ),
-                              ),
-                              showVideoProgressIndicator: true,
-                              progressIndicatorColor: Colors.red,
-                              progressColors: const ProgressBarColors(
-                                playedColor: Colors.red,
-                                handleColor: Colors.redAccent,
-                              ),
-                            ),
-                    ),
+                    VideoPlayerWidget(videoKey: comingSoon[index].videoKey),
+                 
                     Row(
                       children: [
                         Expanded(
@@ -116,7 +98,7 @@ class CommingSoonWidget extends StatelessWidget {
             ],
           ),
         );
-      }),
+      },
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
 import 'package:netflix/core/colors.dart';
 import 'package:netflix/core/sizes.dart';
 import 'package:netflix/presentationn/new_&_hot/widgets/coming_soon.dart';
@@ -55,10 +56,14 @@ class NewAndHotScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            CommingSoonWidget(),
-            EveryoneWatchingWidget(),
+            comingSoon.isEmpty
+                ? const Center(child: Text("No Datas"))
+                : const CommingSoonWidget(),
+            comingSoon.isEmpty
+                ? const Center(child: Text("No Datas"))
+                : const EveryoneWatchingWidget(),
           ],
         ),
       ),

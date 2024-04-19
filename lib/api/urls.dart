@@ -20,3 +20,19 @@ const imageList = [
   "https://image.tmdb.org/t/p/w600_and_h900_bestv2/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
   "https://image.tmdb.org/t/p/w600_and_h900_bestv2/BgcvtsVWLQfjHD6Dr3YYgeSLYk.jpg"
 ];
+
+const videoList = [
+  "Nv5r7-p9l44",
+  "qOFSk7SsPls",
+  "EclwoVfNgOA",
+  "tZ4gg-UAgC8",
+  "kZVLxyCwSDI",
+  "o7FGXxT9mng",
+  "KXVi1uw8ZWk",
+  "mVR1-NfiLDk",
+  "uYKqxzJjqAQ",
+  "r_mI-_Wb-9Y",
+  "HK7q3njG2og",
+  "BymU072rUV8",
+  "yfk8ak1rKIM"
+];

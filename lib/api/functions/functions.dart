@@ -24,7 +24,7 @@ getUpcoming() async {
         Uri.parse(ApiUrls.upcomingurl),
       );
       debugPrint(
-          "--------------------------------------${response.statusCode}");
+          "-------------${response.statusCode}-------------------");
       if (response.statusCode == 200) {
         // Request succeeded
         final data = jsonDecode(response.body)["results"] as List;
@@ -33,7 +33,7 @@ getUpcoming() async {
           String? videoKey;
 
           videoKey = await getvideoUrl(data[i]["id"].toString());
-          print("##################################$videoKey");
+        
           UpcomingModels newModel = UpcomingModels(
               id: data[i]["id"],
               releaseDate: data[i]["release_date"],
@@ -42,7 +42,7 @@ getUpcoming() async {
               videoKey: videoKey);
           comingSoon.add(newModel);
         }
-        print("***********************************************$comingSoon");
+      
         return;
       }
     } catch (e) {

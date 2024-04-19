@@ -4,7 +4,11 @@ import 'package:netflix/core/colors.dart';
 class VideoActionWidget extends StatelessWidget {
   final Widget icon;
   final String title;
-  const VideoActionWidget({super.key, required this.icon, required this.title});
+  const VideoActionWidget({
+    super.key,
+    required this.icon,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {

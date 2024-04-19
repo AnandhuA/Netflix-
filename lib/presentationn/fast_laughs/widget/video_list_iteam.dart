@@ -1,17 +1,32 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix/api/urls.dart';
 import 'package:netflix/presentationn/fast_laughs/widget/video_action_widgets.dart';
-import 'package:netflix/presentationn/search/widgets/search_result_iteams.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoListIteam extends StatelessWidget {
   final int index;
   const VideoListIteam({super.key, required this.index});
-
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
           color: Colors.accents[index % Colors.accents.length],
+          child: YoutubePlayer(
+            controller: YoutubePlayerController(
+              initialVideoId: videoList[index],
+              flags: const YoutubePlayerFlags(
+                  autoPlay: true,
+                  mute: false,
+                  enableCaption: false,
+                  loop: true,
+                  hideThumbnail: true,
+                  disableDragSeek: true,
+                  hideControls: true),
+            ),
+            aspectRatio: 9 / 16,
+          ),
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -33,7 +48,9 @@ class VideoListIteam extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage(url),
+                      backgroundImage: AssetImage(
+                        "assets/images/netflix-icon.1024x1024.png",
+                      ),
                     ),
                     VideoActionWidget(
                       icon: Icon(Icons.emoji_emotions),
@@ -44,7 +61,7 @@ class VideoListIteam extends StatelessWidget {
                       title: "My List",
                     ),
                     VideoActionWidget(
-                      icon: Icon(Icons.share),
+                      icon: Icon(CupertinoIcons.location_fill),
                       title: "Share",
                     ),
                     VideoActionWidget(
