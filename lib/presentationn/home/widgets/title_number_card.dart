@@ -22,7 +22,7 @@ class TitleNumberCard extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: List.generate(
-              downloadsImageUrls.length~/2,
+              downloadsImageUrls.length,
               (index) {
                 return Stack(
                   children: [

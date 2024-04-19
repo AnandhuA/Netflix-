@@ -15,11 +15,7 @@ class DownloadsImageWidget extends StatelessWidget {
   final double rotateion;
   final EdgeInsets margin;
 
-  // final imageList = [
-  //   "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
-  //   "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-  //   "https://image.tmdb.org/t/p/w600_and_h900_bestv2/j91LJmcWo16CArFOoapsz84bwxb.jpg",
-  // ];
+ 
 
   @override
   Widget build(BuildContext context) {

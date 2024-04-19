@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/api/functions/functions.dart';
+import 'package:netflix/api/urls.dart';
 import 'package:netflix/core/colors.dart';
-import 'package:netflix/presentationn/home/widgets/custom_button.dart';
-
-const mainImage =
-    "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg";
+import 'package:netflix/presentationn/widgets/custom_button.dart';
 
 class BackgroundCardWidget extends StatelessWidget {
   const BackgroundCardWidget({super.key});
@@ -13,14 +12,12 @@ class BackgroundCardWidget extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 500,
+          height: 600,
           width: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(
-                mainImage,
-              ),
-              fit: BoxFit.cover,
+              image: NetworkImage("$imageUrl${trendingUrls[0]}"),
+              fit: BoxFit.fill,
             ),
           ),
         ),

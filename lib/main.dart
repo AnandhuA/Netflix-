@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:netflix/core/colors.dart';
 import 'package:netflix/presentationn/splash/splash.dart';
 
@@ -14,6 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: backgroundBlack,
+          titleTextStyle: TextStyle(
+            color: textWhite,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         scaffoldBackgroundColor: backgroundBlack,
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: textWhite),
@@ -25,5 +34,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

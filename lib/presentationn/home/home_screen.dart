@@ -43,17 +43,17 @@ class HomeScreen extends StatelessWidget {
                       titleText: "Trending Now",
                       imageList: trendingUrls,
                     ),
-                    const TitleNumberCard(
-                      titleText: "Top 10 Tv Shows in India Today",
+                    TitleNumberCard(
+                      titleText:
+                          "Top ${downloadsImageUrls.length} Tv Shows in India Today",
                     ),
                     MainTitleCardWidget(
                       titleText: "Tenes Dramas",
                       imageList: tenesDramasUrls,
                     ),
                     MainTitleCardWidget(
-                      titleText: "South Indian Cinema",
-                      imageList: southCinemaUrls
-                    ),
+                        titleText: "South Indian Cinema",
+                        imageList: southCinemaUrls),
                   ],
                 ),
                 scrollNotifier.value ? const CustomAppBarWidget() : kHeight

@@ -9,4 +9,14 @@ class ApiUrls {
   static const releasedInPastYearUrl = "${baseUrl}movie/popular$apiKey";
   static const tenesDramasUrl = "${baseUrl}trending/tv/day$apiKey";
   static const southCinemaUrl = "${baseUrl}movie/now_playing$apiKey";
+  static const upcomingurl = "${baseUrl}movie/upcoming$apiKey";
+  static const videoApiUrl = "${baseUrl}movie/1096197/videos$apiKey";
 }
+
+const imageList = [
+  "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+  "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+  "https://image.tmdb.org/t/p/w600_and_h900_bestv2/j91LJmcWo16CArFOoapsz84bwxb.jpg",
+  "https://image.tmdb.org/t/p/w600_and_h900_bestv2/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
+  "https://image.tmdb.org/t/p/w600_and_h900_bestv2/BgcvtsVWLQfjHD6Dr3YYgeSLYk.jpg"
+];

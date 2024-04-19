@@ -1,8 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:netflix/api/functions/functions.dart';
+
 import 'package:netflix/presentationn/main_page/main_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,24 +25,24 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Lottie.asset(
           "assets/animations/netflix.json",
           width: 200,
+          repeat: false,
         ),
       ),
     );
   }
 
-  goToMainScreen() {
-    Timer(const Duration(seconds: 4), () {
-      getDownloads();
-      getTrending();
-      getReleasedPastYear();
-      getTenesDramas();
-      getSouthCinemas();
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => MainPage(),
-        ),
-      );
-    });
+  goToMainScreen() async {
+   await getUpcoming();
+    await getTrending();
+    await getDownloads();
+    await getReleasedPastYear();
+    await getTenesDramas();
+    await getSouthCinemas();
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MainPage(),
+      ),
+    );
   }
 }
