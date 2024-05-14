@@ -1,6 +1,25 @@
-# netflix
+# Netflix Clone
 
-A new Flutter project.
+A Flutter application that replicates the Netflix user interface and functionality, utilizing the TMDB (The Movie Database) API to fetch and display movie data.
+
+## Features
+
+- Browse popular movies
+- Search for movies
+- View movie details
+- Responsive design for both Android and iOS
+
+## Screenshots
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/a08cb622-7b0d-42f4-9277-eed606abd09a" alt="Screenshot" width="300" style="margin: 550px;"/>
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/b1bdba51-aa3e-42f2-8dfa-dd6d3f6b9b87" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/e448c6a5-2f7a-49b1-b6ef-7913db05a7e9" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/9835561f-2b6a-469f-8c51-44e0168f06eb" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/d94809c7-473f-4d21-9abc-7b63b3eb3fe1" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/2fa11497-09bd-4ed2-b5ff-b4a4939840fe" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/4283c142-9b3d-42c0-96f2-038309d74d69" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/8878b7d5-effc-4c8a-b328-d1ebd3362bbd" alt="Screenshot" width="300" style="margin: 550px;" />
+<img src="https://github.com/AnandhuA/Netfilx/assets/72302650/e9d02e1b-01cb-410d-ac88-c368eab5316a" alt="Screenshot" width="300" style="margin: 550px;" />
+
 
 ## Getting Started
 
