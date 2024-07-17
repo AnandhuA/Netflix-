@@ -40,8 +40,8 @@ A Flutter application that replicates the Netflix user interface and functionali
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/music-app.git
-   cd music-app
+   git clone https://github.com/AnandhuA/Netflix-.git
+   cd Netflix
 
 2. Install dependencies:
    ```bash
